@@ -115,7 +115,7 @@ nav:
             - "dbGAP Downloads": hpc_tools/dbgap.md
             - "Tufts VDI": hpc_tools/vdi.md
     - Unix/R/Python Tutorials:
-        - Introduction: basic/unix_r_python.md
+        - Introduction: programming_languages/unix_r_python.md
         - Unix:
             - Intro To Unix: 
                 - "Intro To Linux": programming_languages/intro_to_unix/01_intro-to-unix.md
