@@ -1,0 +1,231 @@
+site_name: Tufts TTS Research Technology Tutorials - Beta 
+repo_url: https://github.com/BioNomad/tuftsTutorials
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+        - content.action.edit 
+        - navigation.footer
+        - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: 'img/logo3.png'
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      prerequisite: octicons/beaker-16
+      quote: octicons/quote-16
+        
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - tables
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+     
+extra_css:
+    - stylesheets/extra.css
+    
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+nav:
+    - About : 
+        - Introduction: index.md
+        - News: 
+            - "2023": news/2023_news.md
+            - "2022": news/2022_news.md
+    - HPC User Guide : 
+        - Introduction To The Cluster:
+            - "What Is The Cluster?": hpc-user-guide/what-is-the-cluster.md
+            - "Request an Account": hpc-user-guide/request-account.md
+            - "Navigate To The Cluster": hpc-user-guide/navigate-to-cluster.md
+            - "File Transfer": hpc-user-guide/file-transfer.md
+        - Cluster Resources:
+            - "Cluster Storage Request": hpc-user-guide/new_cluster_storage.md
+            - "Cluster Storage Increase Request": hpc-user-guide/cluster_storage_increase.md
+            - "Compute Resources": hpc-user-guide/compute-resources.md
+            - "Software On The Cluster": hpc-user-guide/software-cluster.md
+        - Introduction To SLURM:
+            - "Interactive Session": hpc-user-guide/interactive-session.md
+            - "Submitting A Batch Job": hpc-user-guide/batch-job.md
+            - "Checking Job Status": hpc-user-guide/job-status.md
+        - HPC Services:
+            - "HPC Services": hpc-user-guide/hpc_services.md
+    - HPC Software/Tools: 
+        - Available HPC Tools: tools/all_hpc_tools.md
+        - Python: 
+            - "Python Interactive Session": tools/python-modules.md
+            - "JupyterLab": tools/python-jupyter.md
+            - "Conda Environments": tools/python-conda.md
+        - R: 
+            - "R Interactive Session": tools/r-interactive.md
+            - "R Batch Jobs": tools/r-batch.md
+            - "RStudio OnDemand": tools/r-rstudio.md
+        - Misc:
+            - "GitHub": tools/github.md
+            - "Rclone": tools/rclone.md
+            - "Containers": tools/containers.md
+            - "Nextflow": tools/nextflow.md
+            - "Parallel": tools/parallel.md 
+            - "API (Application Programming Interface)": tools/api.md
+            - "dbGAP Downloads": tools/dbgap.md
+            - "Tufts VDI": tools/vdi.md
+    - Unix/R/Python Tutorials:
+        - Introduction: basic/unix_r_python.md
+        - Unix:
+            - Intro To Unix: 
+                - "Intro To Linux": basic/intro-to-unix/intro-to-unix.md
+                - "Starting with Shell": basic/intro-to-unix/start-w-shell.md
+                - "Bash Parameters": basic/intro-to-unix/bash-parameters.md
+                - "Shell Navigation": basic/intro-to-unix/shell-navigation.md
+                - "Creating & Manipulating Files": basic/intro-to-unix/create-manipulate-files.md
+                - "Going Home": basic/intro-to-unix/going-home.md
+                - "Running an Interactive Session": basic/intro-to-unix/running-interactive.md
+                - "Example with BLAST": basic/intro-to-unix/blast-example.md
+                - "BLAST Batch Script": basic/intro-to-unix/blast-batch.md
+        - R:
+            - Intro To R: 
+                - "Introduction To R OnDemand": basic/intro-to-r/r-ondemand.md
+                - "R Basics": basic/intro-to-r/basics.md
+                - "Data Structures": basic/intro-to-r/data-structures.md
+                - "Functions & Flow": basic/intro-to-r/functions-flow.md
+                - "Inspecting/Manipulating Data": basic/intro-to-r/inspecting-manipulating-data.md
+                - "Visualization": basic/intro-to-r/visualization.md
+        - Python:
+            - Intro To Python:
+                - "Introduction To Python OnDemand": basic/intro-to-python/python-ondemand.md
+                - "Variables & Data Types": basic/intro-to-python/variables-data-types.md
+                - "Libraries & Data Frames": basic/intro-to-python/libraries-data-frames.md
+                - "Plotting with Plotly": basic/intro-to-python/plotting-plotly.md
+                - "Lists": basic/intro-to-python/lists.md
+                - "Loops & Conditionals": basic/intro-to-python/loops-conditionals.md
+                - "Functions & Scope": basic/intro-to-python/functions-scope.md
+    - Omics Tutorials:
+        - Introduction: omics/omics.md
+        - Genomics:
+            - NGS Tips & Tricks: 
+                - "Fastq Manipulation": omics/ngsTipsAndTricks/fastq/fastq.md
+            - Intro To NGS: 
+                - "Background": omics/intro-to-ngs/background.md
+                - "Setup": omics/intro-to-ngs/01_Setup.md
+                - "Quality Control": omics/intro-to-ngs/02_Quality_Control.md
+                - "Alignment": omics/intro-to-ngs/03_Alignment.md
+                - "Alignment Cleanup": omics/intro-to-ngs/04_Alignment_Cleanup.md
+                - "Variant Calling": omics/intro-to-ngs/05_Variant_Calling.md
+                - "Variant Annotation": omics/intro-to-ngs/06_Variant_Annotation.md
+            - Intro To 16S Metabarcoding: 
+                - "Background": omics/intro-to-16S/background.md
+                - "Setup": omics/intro-to-16S/setup.md
+                - "Quality Control": omics/intro-to-16S/quality-control.md
+                - "Error Model & ASVs": omics/intro-to-16S/error-asv.md
+                - "Merging, Chimeras & Taxonomy": omics/intro-to-16S/merging-chimeras-taxonomy.md
+                - "Diversity Analysis": omics/intro-to-16S/diversity-analysis.md
+                - "Differential Abundance": omics/intro-to-16S/differential-abundance.md
+        - Transcriptomics:
+            - Intro To RNA-Seq: 
+                - "Background": omics/intro-to-rnaseq/background.md
+                - "Setup": omics/intro-to-rnaseq/01_Setup.md
+                - "Quality Control": omics/intro-to-rnaseq/02_Quality_Control.md
+                - "Read Alignment": omics/intro-to-rnaseq/03_Read_Alignment.md
+                - "Gene Quantification": omics/intro-to-rnaseq/04_Gene_Quantification.md
+                - "Differential Expression": omics/intro-to-rnaseq/05_Differential_Expression.md
+                - "Pathway Enrichment": omics/intro-to-rnaseq/06_Pathway_Enrichment.md
+        - Proteomics:
+            - Intro To Proteomics:
+                - "Background": omics/intro-to-proteomics/00_background.md
+                - "Setup": omics/intro-to-proteomics/01_setup.md
+            - Intro To AlphaFold2:
+                - "Background": omics/intro-to-alphafold2/01_background.md
+                - "Setup": omics/intro-to-alphafold2/02_setup.md
+                - "AlphaFold2 Pre-Processing": omics/intro-to-alphafold2/03_af2_preprocess.md
+                - "AlphaFold2 Evoformer/Structure Module": omics/intro-to-alphafold2/04_af2_evoformer_structure.md
+                - "AlphaFold2 Output": omics/intro-to-alphafold2/05_af2_output.md
+                - "PyMOL Visualization": omics/intro-to-alphafold2/06_pymol_viz.md
+                - "Optional: AlphaFold2 Batch Script": omics/intro-to-alphafold2/07_af2_batch.md
+    - Biostatistics:
+        - "Introduction To Biostatistics": stats/stats.md
+        - "Setup": stats/biostats.md
+        - Variables and Sampling:
+            - "Quantitative Variables": stats/quant.md
+            - "Qualitative Variables": stats/qual.md
+            - "Sampling": stats/sampling.md
+            - "Confidence Intervals": stats/confidence-interval.md
+            - "Probability Distributions": stats/distributions.md
+        - Analyzing One Categorial Variable:
+            - "Binomial Test": stats/binomial-test.md
+        - Analyzing Two Categorical Variables:
+            - "Odds": stats/odds.md
+            - "Risk/Odds Ratio": stats/odds-ratio-risk.md
+            - "Fisher's Exact Test": stats/fisher-test.md
+            - "Chi-Square Test": stats/chi-square.md
+        - Analyzing One Numeric Variable:
+            - "One Sample T-Test": stats/one-t-test.md
+        - Analyzing Numeric Variable With Two Groups:
+            - "Paired T-Test": stats/paired-t-test.md
+            - "Two Sample T-Test": stats/two-t-test.md
+        - Analyzing Two Numeric Variables:
+            - "Correlation": stats/correlation.md
+        - Analyzing Two Or More Groups:
+            - "One-Way ANOVA": stats/one-way-anova.md
+    - Machine Learning: 
+        - Introduction To Machine Learning: 
+            - "Introduction To Machine Learning": machine-learning/introduction.md
+            - "Tutorial Setup": machine-learning/setup.md
+        - Unsupervised Learning:
+            - "Dimension Reduction": machine-learning/unsupervised/dimension-reduction.md
+            - "Distance Metrics": machine-learning/unsupervised/clustering.md
+            - "K-Means Clustering": machine-learning/unsupervised/k-means.md
+            - "Hierarchical Clustering": machine-learning/unsupervised/hierarchical.md
+        - Supervised Learning:
+            - Linear Models: machine-learning/supervised/linear-model.md
+            - Logistic Regression: machine-learning/supervised/logistic-regression.md
+            - Survival Analysis Part 1: machine-learning/supervised/surv-part1.md
+            - Survival Analysis Part 2: machine-learning/supervised/surv-part2.md
+            - Multivariate Regression: machine-learning/supervised/multivariate-regression.md
+            - Model Performance: machine-learning/supervised/model-performance.md
+    
+        
