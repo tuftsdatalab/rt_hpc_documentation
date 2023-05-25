@@ -1,43 +1,30 @@
-# About Tufts Research Technology Bioinformatics
+# About Tufts TTS Research Technology 
 
-Research Technology Bioinformatics provides consultations to Tufts students, faculty and researchers. 
-In addition we maintain bioinformatics tools on the [Tufts HPC Cluster](https://it.tufts.edu/high-performance-computing) and the [Tufts Galaxy Platform](https://galaxy.pax.tufts.edu). 
-We also lead in-class sessions, partner on grants, and develop workshops.
+Research Technology (RT) works closely with Tufts academic and research communities to define their technology needs and provide innovative IT solutions that support the University’s goal of academic and research excellence. RT offers a wide array of services in support of teaching, learning and research.
 
-## Coming Soon
+## TTS Research Technology Services
 
-**Omics Tutorials**
+**Infrastructure & Tools:**
 
-- Metagenomics
-- Proteomics
-- Metabolomics
-- GWAS
-- DNA Methylation Analysis
-- CHIP-seq Analysis
-- Multi-omics
+- Tufts Data Labs
+- High-Performance Research Computing
+- Research Storage
+- Research Data Management
+- Specialized Hardware
+- Commercial and Open-source Software Application
 
-**Biostatistics:**
+**Consultation Services**
 
-- Two-Way ANOVA
-- Bayes Rule
-- Bayes Alternatives to Frequentist Statistics
+- Provide walk-in and advanced consultations for scientific computing, bioinformatics, data management, data engineering, statistics, computational methods, Geographic Information Systems (GIS), and visualization
+- Emerging Technologies / Grant Proposals
+- Project Management
+- University Goals and Initiatives
+- Strategic Planning
 
-**Machine Learning:**
+**Educational Services**
 
-- Model Performance
-- Regularization
-- Decision Trees/Ensemble Methods
-- Neural Networks
-- Deep Learning
-- Bayesian Modelling
-- Bayesian Networks
-
-!!! note "Acknowledgement"
-
-    Much of this content has been adapted from great tutorials originally created by:
-    
-    - **Jason Laird**, Bioinformatics Scientist, TTS Research Technology, Tufts University
-    - **Rebecca Batorsky**, Data Scientist, DISC,  Tufts University
-    - **Adelaide Rhodes**, Senior Bioinformatics Scientist, TTS Research Technology, Tufts University
-        
-    We would also like to thank Kyle Monahan, Klara Chura, Christina Divoll, Kayla Sansevere, and Uku Uustalu for their review of this content!
+- Provide educational support for scientific computing, bioinformatics, data engineering, statistics, computational methods, Geographic Information Systems (GIS), and visualization
+- Provide in-class sessions and workshops
+- Assist with course design
+- Develop & maintain online tutorials & instructional materials
+- Coordinate outreach
