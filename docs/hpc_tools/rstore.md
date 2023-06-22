@@ -4,7 +4,7 @@
 
 ![]()
 
-!!! info ""
+!!! info "Some Description"
     Some Text here
 
 [TO UPDATE]
