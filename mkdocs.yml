@@ -114,6 +114,7 @@ nav:
             - "API (Application Programming Interface)": hpc_tools/api.md
             - "dbGAP Downloads": hpc_tools/dbgap.md
             - "Tufts VDI": hpc_tools/vdi.md
+            - "RStore": hpc_tools/rstore.md
     - Unix/R/Python Tutorials:
         - Introduction: programming_languages/unix_r_python.md
         - Unix:
