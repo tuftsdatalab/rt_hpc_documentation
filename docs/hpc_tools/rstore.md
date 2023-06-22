@@ -2,12 +2,12 @@
 
 ## Description 
 
-![]()
+![](images/api_codes.png)
 
 !!! info "Some Description"
-    Some Text here
+    Testing 12
 
-[TO UPDATE]
+UPDATE with general info of Rstore and how to navigate
 
 ## Instructions
 
