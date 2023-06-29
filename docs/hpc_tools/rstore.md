@@ -13,11 +13,12 @@
 ## Instructions
 
 To request a NEW storage: 
-1. Click on this [form]([https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj])
+
+1. Click on this [form]([https://shib-idp.tufts.edu/idp/profile/SAML2/POST/SSO?execution=e1s1])
 2. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and proceed
-3. Select "Rstore Drive" and "New Storage or Increment" and proceed
+3. Select "Rstore Drive" and "New Storage or Increment" and proceed 
 4. Complete the required fields on the next page based on the purpose of the new drive.
-   - Please note that approvers and access can be managed after the creation of the storage if preferences change.
+   - Please note that listed approvers and access can be changed later if needed 
 5. Review information and proceed! Your ticket has been submitted, a follow-up can be expected within two business days.
 
 
