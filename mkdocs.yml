@@ -144,6 +144,7 @@ nav:
                 - "Functions & Scope": programming_languages/intro_to_python/07_functions-scope.md 
     - RStore:
         - Description: RStore/Description.md  
+                - "General": docs/RStore/General
               
       
     
