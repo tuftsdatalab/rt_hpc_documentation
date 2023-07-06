@@ -1,15 +1,13 @@
-# <u>__ What is R Store and How Should I Use it? __</u> 
-
-![](images/researchstorage.png)
+# <u>__ What is RStore and How Should I Use it? __</u> 
 
 !!! info "What is RStore?"
     ## Rstore (Research Data Storage) is a networked drive for researchers and faculty to store research-related data and computational assets. Users typically begin with 50 GB of storage and can be escalated up to several TB as needed.  
 
-    ## The storage space can be accessed by all members of the lab/group following the approval of the PI (s) or other listed approvers. 
+    ## The storage space can be accessed by all members of the lab/group following the approval of the PI(s) or other listed approvers. 
 
 
 # **How to Create a NEW storage **
-!!! info "Please click here:[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)"
+!!! info "Please click here:       ==[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)=="
     1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br>
     2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br>
     3. Complete the required fields on the next page based on the purpose of the new drive. <br> 
