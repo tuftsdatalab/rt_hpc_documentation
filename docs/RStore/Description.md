@@ -1,5 +1,4 @@
-# <u>__ What is RStore and How Should I Use it? __</u> 
-<img src="https://access.tufts.edu/themes/custom/access_tufts/assets/icons/icon-technology.svg"  width="50%" height="50%">
+# <u>__ What is RStore and How Should I Use it? __</u>_______________________<img src="https://access.tufts.edu/themes/custom/access_tufts/assets/icons/icon-technology.svg"  width="10%" height="10%">
 !!! info "What is RStore?"
     ## Rstore (Research Data Storage) is a networked drive for researchers and faculty to store research-related data and computational assets. Users typically begin with 50 GB of storage and can be escalated up to several TB as needed.  
 
