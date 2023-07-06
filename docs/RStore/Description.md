@@ -1,4 +1,4 @@
-## What is RStore?
+# What is R Store and How Should I Use it?
 
 ![](images/researchstorage.png)
 
@@ -7,19 +7,18 @@
 
     ## The storage space can be accessed by all members of the lab/group following the approval of the PI (s) or other listed approvers. 
 
-!!! info "How to create a NEW Drive"
-    Go to this link: https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj
-    <details>  
-    <summmary> Click [here](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj) </summary>
+!!! info "Click [here](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)"
+    <Test>  
+    Click [here](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj) 
 
-    1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click → <br>
-    2. Select "Rstore Drive" and "New Storage or Increment" and click → <br>
+    1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br>
+    2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br>
     3. Complete the required fields on the next page based on the purpose of the new drive. <br> 
         - Please note that listed approvers and access priveledges can be changed later if needed <br>
-    4. Review information and click → ! Your ticket has been submitted, a follow-up can be expected within 1-2 business days. <br>
-    </details>
+    4. Review information and click [ → ] . Your ticket has been submitted, a follow-up can be expected within 1-2 business days. <br>
+    </Test>
 
-### **How to map a drive once it has been created:**
+# **How to map a drive once it has been created:**
 
 <details>
 <summary>To map the drive(s) on a Windows computer: </summary>
