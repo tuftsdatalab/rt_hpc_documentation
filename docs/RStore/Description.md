@@ -1,4 +1,4 @@
-# <u>__ What is R Store and How Should I Use it? __<u> 
+# <u>__ What is R Store and How Should I Use it? __</u> 
 
 ![](images/researchstorage.png)
 
