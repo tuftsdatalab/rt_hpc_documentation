@@ -1,4 +1,4 @@
-# What is R Store and How Should I Use it?
+# <u>__ What is R Store and How Should I Use it? __<u> 
 
 ![](images/researchstorage.png)
 
@@ -7,10 +7,9 @@
 
     ## The storage space can be accessed by all members of the lab/group following the approval of the PI (s) or other listed approvers. 
 
-!!! info "Click [here](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)"
-    <Test>  
-    Click [here](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj) 
 
+# **How to Create a NEW storage **
+!!! info "Please click here:[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)"
     1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br>
     2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br>
     3. Complete the required fields on the next page based on the purpose of the new drive. <br> 
