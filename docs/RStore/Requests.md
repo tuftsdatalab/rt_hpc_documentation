@@ -1,7 +1,11 @@
+markdown_extensions:
+  - pymdownx.details
 
-## For all of the following requests please go to ==[tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)== and login with your Tufts Credentials. 
+##Additional R Store Requests 
 
-[Imgur](https://i.imgur.com/q7wx5t7.png) 
+For all of the following requests please go to ==[tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)== and login with your Tufts Credentials. 
+
+![](docs/RStore/images/qualtrics.png) 
 
 Once at the screen above, fill out the blank fields and select "Research Storage Request Related to Cluster, RStore or Galaxy" and click [ → ]. Proceed to the next set of directions below according to your request.  
 
@@ -27,16 +31,16 @@ Once at the screen above, fill out the blank fields and select "Research Storage
 
 ??? example "To submit an official RStore Drive Increment Request."
 
-a. Go to https://it.tufts.edu/research-technology/
-b. Click on "Research Storage Request"
-c. Login with your Tufts credentials
-d. Fill out blank fields
-e. Select "Research Storage Request Related to Cluster, RStore or Galaxy"
-f. Select "Rstore Drive (R drive, Desktop Storage)"
-g. Select "New Storage or Increment"
-h. Click next
-i. Fill out remaining information letting us know you need a new storage increment
-j. Click on Submit
+    a. Go to https://it.tufts.edu/research-technology/
+    b. Click on "Research Storage Request"
+    c. Login with your Tufts credentials
+    d. Fill out blank fields
+    e. Select "Research Storage Request Related to Cluster, RStore or Galaxy"
+    f. Select "Rstore Drive (R drive, Desktop Storage)"
+    g. Select "New Storage or Increment"
+    h. Click next
+    i. Fill out remaining information letting us know you need a new storage increment
+    j. Click on Submit
 
 
 ### **Rstore Drive Grant Access**
@@ -44,14 +48,14 @@ j. Click on Submit
 ??? tip "To request access for yourself or other to Rstore Drive(s):"
 
 
-a. Go to https://it.tufts.edu/research-technology/
-b. Click on "Research Storage Request"
-c. Login with your Tufts credentials
-d. Fill out blank fields
-e. Select "Research Storage Request Related to Cluster, RStore or Galaxy"
-f. Select "Rstore Drive (R drive, Desktop Storage)"
-g. Select "Request Access"
-h. For FULL PATH of STORAGE input: \\rstore.tufts.edu\RstoreDriveName
-i. Click next
-j. Fill out remaining information
-k. Click on Submit
+    a. Go to https://it.tufts.edu/research-technology/
+    b. Click on "Research Storage Request"
+    c. Login with your Tufts credentials
+    d. Fill out blank fields
+    e. Select "Research Storage Request Related to Cluster, RStore or Galaxy"
+    f. Select "Rstore Drive (R drive, Desktop Storage)"
+    g. Select "Request Access"
+    h. For FULL PATH of STORAGE input: \\rstore.tufts.edu\RstoreDriveName
+    i. Click next
+    j. Fill out remaining information
+    k. Click on Submit
