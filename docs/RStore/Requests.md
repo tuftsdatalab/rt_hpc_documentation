@@ -1,9 +1,9 @@
 
-## For all of the following requests please go to [tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)
+## For all of the following requests please go to ==[tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)== and login with your Tufts Credentials. 
 
+[Imgur](https://i.imgur.com/q7wx5t7.png) 
 
-
-
+Once at the screen above, fill out the blank fields and select "Research Storage Request Related to Cluster, RStore or Galaxy" and click [ → ]. Proceed to the next set of directions below according to your request.  
 
 ### **Rstore Drive INCREASE** 
 
@@ -23,7 +23,6 @@
 
 
 
-
 ### **Rstore Drive NEW INCREMENT**
 
 ??? example "To submit an official RStore Drive Increment Request."
@@ -38,7 +37,6 @@ g. Select "New Storage or Increment"
 h. Click next
 i. Fill out remaining information letting us know you need a new storage increment
 j. Click on Submit
-
 
 
 ### **Rstore Drive Grant Access**
