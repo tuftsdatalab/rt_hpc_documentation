@@ -1,0 +1,3161 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../hpc_user_guide/hpc_services/">
+      
+      
+        <link rel="next" href="../python-modules/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Available HPC Tools - Tufts TTS Research Technology Tufts HPC Documentation - Beta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--prerequisite:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#available-tufts-hpc-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tufts TTS Research Technology Tufts HPC Documentation - Beta" class="md-header__button md-logo" aria-label="Tufts TTS Research Technology Tufts HPC Documentation - Beta" data-md-component="logo">
+      
+  <img src="../../img/logo3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tufts TTS Research Technology Tufts HPC Documentation - Beta
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Available HPC Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tuftsdatalab/rt_hpc_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../hpc_user_guide/what-is-the-cluster/" class="md-tabs__link">
+        HPC User Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        HPC Software/Tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programming_languages/unix_r_python/" class="md-tabs__link">
+        Unix/R/Python Tutorials
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../RStore/Description/" class="md-tabs__link">
+        RStore
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tufts TTS Research Technology Tufts HPC Documentation - Beta" class="md-nav__button md-logo" aria-label="Tufts TTS Research Technology Tufts HPC Documentation - Beta" data-md-component="logo">
+      
+  <img src="../../img/logo3.png" alt="logo">
+
+    </a>
+    Tufts TTS Research Technology Tufts HPC Documentation - Beta
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tuftsdatalab/rt_hpc_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          News
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          News
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/2023_news/" class="md-nav__link">
+        2023
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/2022_news/" class="md-nav__link">
+        2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          HPC User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          HPC User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Introduction To The Cluster
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction To The Cluster
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/what-is-the-cluster/" class="md-nav__link">
+        What Is The Cluster?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/request-account/" class="md-nav__link">
+        Request an Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/navigate-to-cluster/" class="md-nav__link">
+        Navigate To The Cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/file-transfer/" class="md-nav__link">
+        File Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Cluster Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cluster Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/new_cluster_storage/" class="md-nav__link">
+        Cluster Storage Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/cluster_storage_increase/" class="md-nav__link">
+        Cluster Storage Increase Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/compute-resources/" class="md-nav__link">
+        Compute Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/software-cluster/" class="md-nav__link">
+        Software On The Cluster
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Introduction To SLURM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction To SLURM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/interactive-session/" class="md-nav__link">
+        Interactive Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/batch-job/" class="md-nav__link">
+        Submitting A Batch Job
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/job-status/" class="md-nav__link">
+        Checking Job Status
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          HPC Services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          HPC Services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hpc_user_guide/hpc_services/" class="md-nav__link">
+        HPC Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          HPC Software/Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          HPC Software/Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Available HPC Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Available HPC Tools
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-tufts-hpc-tools" class="md-nav__link">
+    Available Tufts HPC Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-modules/" class="md-nav__link">
+        Python Interactive Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-jupyter/" class="md-nav__link">
+        JupyterLab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-conda/" class="md-nav__link">
+        Conda Environments
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          R
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-interactive/" class="md-nav__link">
+        R Interactive Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-batch/" class="md-nav__link">
+        R Batch Jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-rstudio/" class="md-nav__link">
+        RStudio OnDemand
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rclone/" class="md-nav__link">
+        Rclone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nextflow/" class="md-nav__link">
+        Nextflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallel/" class="md-nav__link">
+        Parallel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API (Application Programming Interface)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbgap/" class="md-nav__link">
+        dbGAP Downloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vdi/" class="md-nav__link">
+        Tufts VDI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rstore.md" class="md-nav__link">
+        RStore
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Unix/R/Python Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unix/R/Python Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/unix_r_python/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Unix
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+          Intro To Unix
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro To Unix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/01_intro-to-unix/" class="md-nav__link">
+        Intro To Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/02_start-w-shell/" class="md-nav__link">
+        Starting with Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/03_bash-parameters/" class="md-nav__link">
+        Bash Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/04_shell-navigation/" class="md-nav__link">
+        Shell Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/05_create-manipulate-files/" class="md-nav__link">
+        Creating & Manipulating Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/06_going-home/" class="md-nav__link">
+        Going Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/07_running-interactive/" class="md-nav__link">
+        Running an Interactive Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/08_blast-example/" class="md-nav__link">
+        Example with BLAST
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_unix/09_blast-batch/" class="md-nav__link">
+        BLAST Batch Script
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          R
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_1" id="__nav_4_3_1_label" tabindex="0">
+          Intro To R
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro To R
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_r_studio/01_r-intro/" class="md-nav__link">
+        Introduction To R OnDemand
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_r_studio/02_r-ondemand/" class="md-nav__link">
+        R Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_r_studio/03_r-workshop-markdown/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Intro To Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Intro To Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/01_python-ondemand/" class="md-nav__link">
+        Introduction To Python OnDemand
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/02_variables-data-types/" class="md-nav__link">
+        Variables & Data Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/03_libraries-data-frames/" class="md-nav__link">
+        Libraries & Data Frames
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/04_plotting-plotly/" class="md-nav__link">
+        Plotting with Plotly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/05_lists/" class="md-nav__link">
+        Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/06_loops-conditionals/" class="md-nav__link">
+        Loops & Conditionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming_languages/intro_to_python/07_functions-scope/" class="md-nav__link">
+        Functions & Scope
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          RStore
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          RStore
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RStore/Description/" class="md-nav__link">
+        Description
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RStore/Requests/" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-tufts-hpc-tools" class="md-nav__link">
+    Available Tufts HPC Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/tuftsdatalab/rt_hpc_documentation/blob/main/docs/hpc_tools/all_hpc_tools.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Available HPC Tools</h1>
+
+<h2 id="available-tufts-hpc-tools">Available Tufts HPC Tools</h2>
+<p>There are a number of modules available on the Tufts HPC. Here we link out to the NIH's documentation for these tools, which will provide descriptions and how to create a batch script to use that tool. </p>
+<div class="admonition info">
+<p class="admonition-title">Note about NIH HPC Documentation</p>
+<p>Note that this will not perfectly line up with how to use this tool on the HPC as we have different reservation, node, and partition names. However, it is a good start to get you going on how to use the tool in a batch script. </p>
+</div>
+<p>For more information on how to create a batch script to work with the Tufts Cluster, check out the following tutorial: <a href="../hpc-user-guide/batch-job.md">How to Create a Batch Script</a></p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Link To Documentation</th>
+<th align="left">Versions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ABySS</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/abyss.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/abyss.html</a></td>
+<td align="left">ABySS/1.5.2</td>
+</tr>
+<tr>
+<td align="left">afni</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/afni.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/afni.html</a></td>
+<td align="left">afni/2014-01-28(default)</td>
+</tr>
+<tr>
+<td align="left">amber</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/AMBER.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/AMBER.html</a></td>
+<td align="left">amber/12(default), amber/12.gpu, amber/14, amber/22-cuda, amber/22-mpi, amber/22-omp, amber/22-serial</td>
+</tr>
+<tr>
+<td align="left">anaconda</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">anaconda/2, anaconda/3, anaconda/2020.02, anaconda/2021.05, anaconda/2021.11, anaconda/bio35</td>
+</tr>
+<tr>
+<td align="left">ancestrymap</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/AncestryMap.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/AncestryMap.html</a></td>
+<td align="left">ancestrymap/6210</td>
+</tr>
+<tr>
+<td align="left">ant</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/ANTs.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/ANTs.html</a></td>
+<td align="left">ant/1.8.2</td>
+</tr>
+<tr>
+<td align="left">aspera</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/transfer.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/transfer.html</a></td>
+<td align="left">aspera/3.5.4</td>
+</tr>
+<tr>
+<td align="left">ATLAS</td>
+<td align="left"><a href="https://hpc.nih.gov/development/ATLAS.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/ATLAS.html</a></td>
+<td align="left">ATLAS/3.9.78</td>
+</tr>
+<tr>
+<td align="left">autoconf</td>
+<td align="left"><a href="https://hpc.nih.gov/development/autotools.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/autotools.html</a></td>
+<td align="left">autoconf/2.69</td>
+</tr>
+<tr>
+<td align="left">bcftools</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/samtools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/samtools.html</a></td>
+<td align="left">bcftools/1.2, bcftools/1.12</td>
+</tr>
+<tr>
+<td align="left">bcl2fastq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/bcl2fastq.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/bcl2fastq.html</a></td>
+<td align="left">bcl2fastq/2.19</td>
+</tr>
+<tr>
+<td align="left">beagle</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Beagle.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Beagle.html</a></td>
+<td align="left">beagle/1.0-cuda, beagle/3.1.2</td>
+</tr>
+<tr>
+<td align="left">BEAST</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/BEAST.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/BEAST.html</a></td>
+<td align="left">BEAST/1.10.1(default), BEAST/1.10.4, BEAST/1.8.4</td>
+</tr>
+<tr>
+<td align="left">bedtools</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/bedtools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/bedtools.html</a></td>
+<td align="left">bedtools/2.17.0, bedtools/2.19.1, bedtools/2.26.0(default)</td>
+</tr>
+<tr>
+<td align="left">binutils</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">binutils/2.29.1</td>
+</tr>
+<tr>
+<td align="left">blacs</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/svis.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/svis.html</a></td>
+<td align="left">blacs/1.1</td>
+</tr>
+<tr>
+<td align="left">BLAS</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Blast.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Blast.html</a></td>
+<td align="left">BLAS/1.0, BLAS/3.5.0, OpenBLAS/0.2.19</td>
+</tr>
+<tr>
+<td align="left">blast</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Blast.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Blast.html</a></td>
+<td align="left">blast/2.2.24, blast/2.2.31, blast/2.3.0, blast/2.8.1, blast-plus/2.11.0, ncbi-magicblast/1.5.0</td>
+</tr>
+<tr>
+<td align="left">blat</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/blat.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/blat.html</a></td>
+<td align="left">blat/20140708(default)</td>
+</tr>
+<tr>
+<td align="left">bowtie</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/bowtie.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/bowtie.html</a></td>
+<td align="left">bowtie/0.12.7(default), bowtie/1.0.1, bowtie/1.1.2, bowtie/2.1.0, bowtie2/2.2.3(default)</td>
+</tr>
+<tr>
+<td align="left">bowtie2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/bowtie2.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/bowtie2.html</a></td>
+<td align="left">bowtie2/2.2.3(default)</td>
+</tr>
+<tr>
+<td align="left">bwa</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/bwa.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/bwa.html</a></td>
+<td align="left">bwa/0.7.17, bwa/0.7.9a</td>
+</tr>
+<tr>
+<td align="left">caffe</td>
+<td align="left"><a href="https://hpc.nih.gov/development/caffe.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/caffe.html</a></td>
+<td align="left">caffe/20161026, caffe/20170201, caffe/20170227, caffe_unet/16.04.10.7, matcaffe/1.0</td>
+</tr>
+<tr>
+<td align="left">cellranger</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/cellranger.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/cellranger.html</a></td>
+<td align="left">cellranger/2.1.1, cellranger/3.0.2, cellranger-atac/1.2.0</td>
+</tr>
+<tr>
+<td align="left">chimera64</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Chimera.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Chimera.html</a></td>
+<td align="left">chimera64/1.6.2, chimera64-osmesa/1.4.2577</td>
+</tr>
+<tr>
+<td align="left">chimera64-osmesa</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Chimera.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Chimera.html</a></td>
+<td align="left">chimera64-osmesa/1.4.2577</td>
+</tr>
+<tr>
+<td align="left">CirSeq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/VIRTUS.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/VIRTUS.html</a></td>
+<td align="left">CirSeq/3</td>
+</tr>
+<tr>
+<td align="left">comsol</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Comsol.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Comsol.html</a></td>
+<td align="left">comsol/4.3b1, comsol/4.4, comsol/5.0, comsol/5.1, comsol/5.2(default), comsol/5.2a, comsol/5.3, comsol/5.3a, comsol/5.4, comsol/5.5, comsol/5.6, comsol/6.0</td>
+</tr>
+<tr>
+<td align="left">cuda</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/deep_learning.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/deep_learning.html</a></td>
+<td align="left">beagle/1.0-cuda, cuda/10.0, cuda/10.2, cuda/11.0, cuda/4.2.9, cuda/5.0.35, cuda/6.5.14, cuda/7.5.18, cuda/8.0.44, cuda/9.0, amber/22-cuda, cuda/11.6, cuda/11.7</td>
+</tr>
+<tr>
+<td align="left">cudnn</td>
+<td align="left"><a href="https://hpc.nih.gov/development/cuDNN.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/cuDNN.html</a></td>
+<td align="left">cudnn/5.1, cudnn/7.1, cudnn/8.0.4-11.0</td>
+</tr>
+<tr>
+<td align="left">cufflinks</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/cufflinks.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/cufflinks.html</a></td>
+<td align="left">cufflinks/0.8.3, cufflinks/2.0.0, cufflinks/2.0.2(default), cufflinks/2.1.1, cufflinks/2.2.1</td>
+</tr>
+<tr>
+<td align="left">Cytoscape</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Cytoscape.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Cytoscape.html</a></td>
+<td align="left">Cytoscape/2.8.3</td>
+</tr>
+<tr>
+<td align="left">eclipse</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/solar.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/solar.html</a></td>
+<td align="left">eclipse/1.4.1, eclipse/1.4.1-x86_64, eclipse/4.6.2-cpp, eclipse/4.6.2-java</td>
+</tr>
+<tr>
+<td align="left">eigen</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/eigensoft.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/eigensoft.html</a></td>
+<td align="left">eigen/3.2.2(default), eigensoft/3.0, eigensoft/4.2, eigen/3.4.0</td>
+</tr>
+<tr>
+<td align="left">eigensoft</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/eigensoft.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/eigensoft.html</a></td>
+<td align="left">eigensoft/3.0, eigensoft/4.2</td>
+</tr>
+<tr>
+<td align="left">espresso</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/express.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/express.html</a></td>
+<td align="left">espresso/3.1.1, espresso/3.3.1</td>
+</tr>
+<tr>
+<td align="left">exonerate</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/exonerate.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/exonerate.html</a></td>
+<td align="left">exonerate/2.2.0(default)</td>
+</tr>
+<tr>
+<td align="left">fastqc</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/fastqc.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/fastqc.html</a></td>
+<td align="left">fastqc/0.11.5, fastqc/0.11.8, fastqc/0.11.9</td>
+</tr>
+<tr>
+<td align="left">fastx</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/fastxtoolkit.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/fastxtoolkit.html</a></td>
+<td align="left">fastx/0.0.13</td>
+</tr>
+<tr>
+<td align="left">ffmpeg</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">ffmpeg/3.2.2</td>
+</tr>
+<tr>
+<td align="left">fftw</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/modules.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/modules.html</a></td>
+<td align="left">fftw/3.3.2(default), fftw/3.3.2-double, fftw/3.3.3, fftw/3.3.3-double, fftw/3.3.10</td>
+</tr>
+<tr>
+<td align="left">freebayes</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/freebayes.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/freebayes.html</a></td>
+<td align="left">freebayes/1.1.0</td>
+</tr>
+<tr>
+<td align="left">freesurfer</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/freesurfer.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/freesurfer.html</a></td>
+<td align="left">freesurfer/5.3.0(default)</td>
+</tr>
+<tr>
+<td align="left">fsl</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/fsl.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/fsl.html</a></td>
+<td align="left">fsl/5.0.6(default), fsl/5.0.9, fsl/6.0.5</td>
+</tr>
+<tr>
+<td align="left">gamess</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/GAMESS.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/GAMESS.html</a></td>
+<td align="left">gamess/2013-03-01</td>
+</tr>
+<tr>
+<td align="left">GATK</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/GATK.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/GATK.html</a></td>
+<td align="left">GATK/3.1-1(default), GATK/3.7, GATK/4.2.6.1</td>
+</tr>
+<tr>
+<td align="left">gaussian</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Gaussian.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Gaussian.html</a></td>
+<td align="left">gaussian/g09, gaussian/g16avx, gaussian/g16avx2, gaussian/g16sse4_2</td>
+</tr>
+<tr>
+<td align="left">gcc</td>
+<td align="left"><a href="https://hpc.nih.gov/development/compilers.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/compilers.html</a></td>
+<td align="left">gcc/4.7.0, gcc/4.9.2, gcc/5.3.0, gcc/7.3.0, gcc/9.3.0, gcc/8.4.0, netcdf/4.0.0-gcc, intel-oneapi-mkl/2021.1.1-gcc-9.3.0, lhapdf5/5.9.1-gcc-4.8.5, intel-oneapi-tbb/2021.1.1-gcc-9.3.0, log4cpp/1.1.3-gcc-4.8.5, perl/5.34.0_gcc7.3.0, pythia6/6.4.28-gcc-4.8.5</td>
+</tr>
+<tr>
+<td align="left">gcta</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/GCTA.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/GCTA.html</a></td>
+<td align="left">gcta/1.25.2</td>
+</tr>
+<tr>
+<td align="left">glibc</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/csd.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/csd.html</a></td>
+<td align="left">glibc/2.14</td>
+</tr>
+<tr>
+<td align="left">glog</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">glog/0.3.4, glog/0.4.0</td>
+</tr>
+<tr>
+<td align="left">gnu-parallel</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/parallel.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/parallel.html</a></td>
+<td align="left">gnu-parallel/20150122</td>
+</tr>
+<tr>
+<td align="left">alphafold</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/alphafold2.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/alphafold2.html</a></td>
+<td align="left">alphafold/2.1.1, alphafold/2.2.0</td>
+</tr>
+<tr>
+<td align="left">annovar</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/ANNOVAR.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/ANNOVAR.html</a></td>
+<td align="left">annovar/202106</td>
+</tr>
+<tr>
+<td align="left">aria2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/aria2.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/aria2.html</a></td>
+<td align="left">aria2/1.35.0</td>
+</tr>
+<tr>
+<td align="left">automake</td>
+<td align="left"><a href="https://hpc.nih.gov/development/autotools.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/autotools.html</a></td>
+<td align="left">automake/1.16.3</td>
+</tr>
+<tr>
+<td align="left">biobakery</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/biobakery_workflows.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/biobakery_workflows.html</a></td>
+<td align="left">biobakery/workflows</td>
+</tr>
+<tr>
+<td align="left">blast-plus</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Blast.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Blast.html</a></td>
+<td align="left">blast-plus/2.11.0</td>
+</tr>
+<tr>
+<td align="left">blender</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/blender.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/blender.html</a></td>
+<td align="left">blender/3.4.1</td>
+</tr>
+<tr>
+<td align="left">cactus</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/cactus.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/cactus.html</a></td>
+<td align="left">cactus/gpu</td>
+</tr>
+<tr>
+<td align="left">cellprofiler</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/cellprofiler.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/cellprofiler.html</a></td>
+<td align="left">cellprofiler/3.1.9, cellprofiler/4.0.6, cellprofiler/4.1.3, cellprofiler/4.2.1</td>
+</tr>
+<tr>
+<td align="left">cellranger-atac</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/cellranger-atac.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/cellranger-atac.html</a></td>
+<td align="left">cellranger-atac/1.2.0</td>
+</tr>
+<tr>
+<td align="left">chimera</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Chimera.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Chimera.html</a></td>
+<td align="left">chimera64/1.6.2, chimera64-osmesa/1.4.2577, chimera/1.15</td>
+</tr>
+<tr>
+<td align="left">condaenv</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">condaenv/bracken</td>
+</tr>
+<tr>
+<td align="left">ctffind</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/ctffind.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/ctffind.html</a></td>
+<td align="left">ctffind/4.1.8</td>
+</tr>
+<tr>
+<td align="left">dssp</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/DSSP.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/DSSP.html</a></td>
+<td align="left">dssp/3.1.4</td>
+</tr>
+<tr>
+<td align="left">emacs</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Editors.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Editors.html</a></td>
+<td align="left">emacs/26.3, emacs/27.1_ccgpu, emacs/X26.3</td>
+</tr>
+<tr>
+<td align="left">eman2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/EMAN2.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/EMAN2.html</a></td>
+<td align="left">eman2/2.91</td>
+</tr>
+<tr>
+<td align="left">fastjar</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">fastjar/0.98</td>
+</tr>
+<tr>
+<td align="left">fasttree</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/FastTree.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/FastTree.html</a></td>
+<td align="left">fasttree/2.1.10</td>
+</tr>
+<tr>
+<td align="left">Fiji</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Fiji.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Fiji.html</a></td>
+<td align="left">Fiji/1.53t, Fiji/ImageJ</td>
+</tr>
+<tr>
+<td align="left">flash</td>
+<td align="left"><a href="https://hpc.nih.gov/systems/hardware.html" rel="noopener" target="_blank">https://hpc.nih.gov/systems/hardware.html</a></td>
+<td align="left">flash/1.2.11</td>
+</tr>
+<tr>
+<td align="left">fontconfig</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">fontconfig/2.13.94</td>
+</tr>
+<tr>
+<td align="left">freetype</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">freetype/2.11.0</td>
+</tr>
+<tr>
+<td align="left">hail</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Hail.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Hail.html</a></td>
+<td align="left">hail/202106</td>
+</tr>
+<tr>
+<td align="left">gstreamer</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">gstreamer/0.10</td>
+</tr>
+<tr>
+<td align="left">imagej</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Fiji.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Fiji.html</a></td>
+<td align="left">imagej/1.52a, imagej/1.5.2</td>
+</tr>
+<tr>
+<td align="left">hdf5</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/ont-fast5-api.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/ont-fast5-api.html</a></td>
+<td align="left">hdf5/1.10.4, hdf5/1.12.1</td>
+</tr>
+<tr>
+<td align="left">hmmer</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/hmmer.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/hmmer.html</a></td>
+<td align="left">hmmer/3.3, hmmer/3.1b2</td>
+</tr>
+<tr>
+<td align="left">htslib</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/samtools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/samtools.html</a></td>
+<td align="left">htslib/1.9, htslib/1.2.1</td>
+</tr>
+<tr>
+<td align="left">libuuid</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libuuid/1.0.3</td>
+</tr>
+<tr>
+<td align="left">gem</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/gem.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/gem.html</a></td>
+<td align="left">gem/1.4.3, imagemagick/7.1.0</td>
+</tr>
+<tr>
+<td align="left">harfbuzz</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">harfbuzz/2.9.1, harfbuzz/5.1.0</td>
+</tr>
+<tr>
+<td align="left">intel</td>
+<td align="left"><a href="https://hpc.nih.gov/systems/hardware.html" rel="noopener" target="_blank">https://hpc.nih.gov/systems/hardware.html</a></td>
+<td align="left">intel/mpi_2021.5.0, intel/compilers_2022.0.1, intel-oneapi-mkl/2021.1.1-gcc-9.3.0, intel-oneapi-tbb/2021.1.1-gcc-9.3.0, intel/2013_sp1, intel/tbb433</td>
+</tr>
+<tr>
+<td align="left">lftp</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/transfer.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/transfer.html</a></td>
+<td align="left">lftp/4.8.1</td>
+</tr>
+<tr>
+<td align="left">fribidi</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">fribidi/1.0.5</td>
+</tr>
+<tr>
+<td align="left">lastz</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/LASTZ.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/LASTZ.html</a></td>
+<td align="left">lastz/1.03</td>
+</tr>
+<tr>
+<td align="left">netcdf</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">netcdf/4.0.0-gcc, netcdf/4.0.0-pgi, netcdf/4.0.0, netcdf/c-4.8.1, netcdf/fortran-4.5.2, netcdf/fortran-4.5.3, netcdf/4.7.4</td>
+</tr>
+<tr>
+<td align="left">java</td>
+<td align="left"><a href="https://hpc.nih.gov/development/java.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/java.html</a></td>
+<td align="left">eclipse/4.6.2-java, java/11.0.2, java/15.0.2, java/1.5.0_64bit, java/1.6.0_64bit, java/1.5.0, java/1.4.2, java/1.6.0, java/1.6.0_25, java/1.6.0_25_64bit, java/1.8.0_60, java/1.7.0_51, structure-java/2.3.4</td>
+</tr>
+<tr>
+<td align="left">lapack</td>
+<td align="left"><a href="https://hpc.nih.gov/development/LAPACK.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/LAPACK.html</a></td>
+<td align="left">lapack/3.9.0, lapack/3.4.0, lapack/3.2.1, lapack/3.5.0, scalapack/1.8.0</td>
+</tr>
+<tr>
+<td align="left">gromacs</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Gromacs.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Gromacs.html</a></td>
+<td align="left">gromacs/4.6.5, gromacs/4.6.5d, gromacs/5.0.1, gromacs/4.5.5(default), gromacs/4.6.1, gromacs/4.6.5-gls, gromacs/4.6.1-slurm, gromacs/4.6.7, gromacs/4.6.7-gpu, gromacs/5.1.0, gromacs/5.1.4-gpu, gromacs-plumed-libmatheval/2014-06-17(default), gromacs/4.6.5+plumed, gromacs/5.1.4</td>
+</tr>
+<tr>
+<td align="left">matlab</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Matlab.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Matlab.html</a></td>
+<td align="left">matlab/2020a, matlab/2019a, matlab/2019b, matlab/2020b, matlab/2021a, matlab/2022a, matlab/2016a, matlab/2016b, matlab/2017b, matlab/2018a, matlab/2017a(default)</td>
+</tr>
+<tr>
+<td align="left">mpfr</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">mpfr/2.4.2(default), mpfr/3.1.2</td>
+</tr>
+<tr>
+<td align="left">julia</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/julia.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/julia.html</a></td>
+<td align="left">julia/1.6.0, julia/1.5.3, julia/0.3</td>
+</tr>
+<tr>
+<td align="left">gcam</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/gautomatch.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/gautomatch.html</a></td>
+<td align="left">gcam/5.3, gcam/5.4</td>
+</tr>
+<tr>
+<td align="left">giflib</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">giflib/5.1.4</td>
+</tr>
+<tr>
+<td align="left">gobject-introspection</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">gobject-introspection/1.56.1</td>
+</tr>
+<tr>
+<td align="left">interproscan</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/interproscan.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/interproscan.html</a></td>
+<td align="left">interproscan/5.20</td>
+</tr>
+<tr>
+<td align="left">glib</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">glibc/2.14, glib/2.56.1, glib/2.66.7</td>
+</tr>
+<tr>
+<td align="left">lammps</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/lammps.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/lammps.html</a></td>
+<td align="left">lammps/20210310, lammps/27Aug13(default), lammps/10Aug15, lammps/16Mar18</td>
+</tr>
+<tr>
+<td align="left">libgmp</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">libgmp/4.1.4</td>
+</tr>
+<tr>
+<td align="left">libicu</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libicu/4.2.1</td>
+</tr>
+<tr>
+<td align="left">imod</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/IMOD.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/IMOD.html</a></td>
+<td align="left">imod/4.11.18, imod/4.9.9, imod/4.9.12</td>
+</tr>
+<tr>
+<td align="left">ld_lib</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/modules.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/modules.html</a></td>
+<td align="left">ld_lib/2.2.21</td>
+</tr>
+<tr>
+<td align="left">libiconv</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libiconv/1.16</td>
+</tr>
+<tr>
+<td align="left">libtiff</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libtiff/4.2.0</td>
+</tr>
+<tr>
+<td align="left">gurobi</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/gurobi.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/gurobi.html</a></td>
+<td align="left">gurobi/9.5.0, gurobi/6.5.1, gurobi/7.5.1, gurobi/8.1.0</td>
+</tr>
+<tr>
+<td align="left">metal</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/metal.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/metal.html</a></td>
+<td align="left">metal/2010-02-08, metal/2011-03-25(default), metal/2010-08-01, metal/2009-10-10</td>
+</tr>
+<tr>
+<td align="left">mirdeep2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mirdeep.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mirdeep.html</a></td>
+<td align="left">mirdeep2/2.0.0.5(default)</td>
+</tr>
+<tr>
+<td align="left">openmpi</td>
+<td align="left"><a href="https://hpc.nih.gov/development/MPI.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/MPI.html</a></td>
+<td align="left">openmpi/1.8.6, openmpi/1.8.2(default), openmpi/2.1.2, openmpi/4.0.4, openmpi/4.0.5, openmpi/1.10.1, openmpi/1.10.2, openmpi/1.6.3-gnu, openmpi/4.1.2, openmpi/3.1.2, openmpi/4.1.1, openmpi/3.1.6, openmpi/3.1.6_slurm, openmpi/4.1.2_slurm, openmpi/4.1.4</td>
+</tr>
+<tr>
+<td align="left">hisat</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/hisat.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/hisat.html</a></td>
+<td align="left">hisat/2.0.5, hisat/2.1.0</td>
+</tr>
+<tr>
+<td align="left">namd</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/NAMD.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/NAMD.html</a></td>
+<td align="left">namd/2014-07-10, namd/2.12-mpi, namd/2.8(default)</td>
+</tr>
+<tr>
+<td align="left">openmm</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/charmm/older_charmm.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/charmm/older_charmm.html</a></td>
+<td align="left">openmm/4.1.1(default), openmm/5.1</td>
+</tr>
+<tr>
+<td align="left">PEET</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/PEET.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/PEET.html</a></td>
+<td align="left">PEET/1_13.0, PEET/1_12.0</td>
+</tr>
+<tr>
+<td align="left">NCAR</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/deep_learning.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/deep_learning.html</a></td>
+<td align="left">NCAR/5.2.1</td>
+</tr>
+<tr>
+<td align="left">opencv</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">opencv/3.1.0, opencv/4.5.1</td>
+</tr>
+<tr>
+<td align="left">IGV</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/IGV.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/IGV.html</a></td>
+<td align="left">IGV/1.5.30</td>
+</tr>
+<tr>
+<td align="left">MCR</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/dynamo.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/dynamo.html</a></td>
+<td align="left">MCR/R2012b, MCR/R2012a</td>
+</tr>
+<tr>
+<td align="left">MDAnalysis</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mdtraj.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mdtraj.html</a></td>
+<td align="left">MDAnalysis/0.8.1</td>
+</tr>
+<tr>
+<td align="left">multinest</td>
+<td align="left"><a href="https://hpc.nih.gov/policies/multinode.html" rel="noopener" target="_blank">https://hpc.nih.gov/policies/multinode.html</a></td>
+<td align="left">multinest/201911</td>
+</tr>
+<tr>
+<td align="left">icc</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">icc/10.1.017</td>
+</tr>
+<tr>
+<td align="left">jupyter</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/jupyter.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/jupyter.html</a></td>
+<td align="left">jupyter/3.0, jupyter/1.0(default)</td>
+</tr>
+<tr>
+<td align="left">kallisto</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/kallisto.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/kallisto.html</a></td>
+<td align="left">kallisto/0.45.0</td>
+</tr>
+<tr>
+<td align="left">mothur</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mothur.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mothur.html</a></td>
+<td align="left">mothur/1.25.1, mothur/1.29.1, mothur/1.36.1(default), mothur/1.48, mothur/1.44, mothur/1.47</td>
+</tr>
+<tr>
+<td align="left">graphviz</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/modules.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/modules.html</a></td>
+<td align="left">graphviz/2.40.1</td>
+</tr>
+<tr>
+<td align="left">HTSeq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/htseq.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/htseq.html</a></td>
+<td align="left">HTSeq/0.5.4p5(default), HTSeq/0.6.1p1</td>
+</tr>
+<tr>
+<td align="left">misopy</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/misopy.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/misopy.html</a></td>
+<td align="left">misopy/0.5.2(default)</td>
+</tr>
+<tr>
+<td align="left">mrbayes</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mrbayes.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mrbayes.html</a></td>
+<td align="left">mrbayes/3.1.2</td>
+</tr>
+<tr>
+<td align="left">nccl</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/deeplearning/multinode_DL.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/deeplearning/multinode_DL.html</a></td>
+<td align="left">nccl/2.7.8-1</td>
+</tr>
+<tr>
+<td align="left">impute</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/IMPUTE.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/IMPUTE.html</a></td>
+<td align="left">impute/2.0.3</td>
+</tr>
+<tr>
+<td align="left">mach</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mash.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mash.html</a></td>
+<td align="left">mach/1.0.16</td>
+</tr>
+<tr>
+<td align="left">MACS</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/macs.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/macs.html</a></td>
+<td align="left">MACS/1.4.2-1</td>
+</tr>
+<tr>
+<td align="left">merlin</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/merlin.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/merlin.html</a></td>
+<td align="left">merlin/1.1.2</td>
+</tr>
+<tr>
+<td align="left">mvapich2</td>
+<td align="left"><a href="https://hpc.nih.gov/development/MPI.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/MPI.html</a></td>
+<td align="left">mvapich2/1.6-1</td>
+</tr>
+<tr>
+<td align="left">ont-guppy</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/guppy.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/guppy.html</a></td>
+<td align="left">ont-guppy/3.3.0-gpu, ont-guppy/3.3.0-cpu, ont-guppy/4.5.2-cpu, ont-guppy/4.5.2-gpu, ont-guppy/5.0.11-gpu, ont-guppy/5.0.11-cpu</td>
+</tr>
+<tr>
+<td align="left">gpaw-mpi</td>
+<td align="left"><a href="https://hpc.nih.gov/development/MPI.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/MPI.html</a></td>
+<td align="left">gpaw-mpi/0.4.2627</td>
+</tr>
+<tr>
+<td align="left">idl</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/idl.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/idl.html</a></td>
+<td align="left">idl/8.4</td>
+</tr>
+<tr>
+<td align="left">libffi</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libffi/3.2.1</td>
+</tr>
+<tr>
+<td align="left">maq</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/helixdrive.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/helixdrive.html</a></td>
+<td align="left">maq/0.7.1</td>
+</tr>
+<tr>
+<td align="left">mathematica</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mathematica.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mathematica.html</a></td>
+<td align="left">mathematica/13.1, mathematica/13.2.1, mathematica/10.4.0, mathematica/10.4.1, mathematica/11.0.0, mathematica/11.3.0, mathematica/12.0, mathematica/13.0, mathematica/12.1(default), mathematica/12.2, mathematica/12.3</td>
+</tr>
+<tr>
+<td align="left">muscle</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/muscle.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/muscle.html</a></td>
+<td align="left">muscle/3.8.31</td>
+</tr>
+<tr>
+<td align="left">gromacs-plumed-libmatheval</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Gromacs.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Gromacs.html</a></td>
+<td align="left">gromacs-plumed-libmatheval/2014-06-17(default)</td>
+</tr>
+<tr>
+<td align="left">MAnorm</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/manorm.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/manorm.html</a></td>
+<td align="left">MAnorm/2014-04-03</td>
+</tr>
+<tr>
+<td align="left">multiqc</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/multiqc.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/multiqc.html</a></td>
+<td align="left">multiqc/1.7.0</td>
+</tr>
+<tr>
+<td align="left">paraview</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/paraview.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/paraview.html</a></td>
+<td align="left">paraview/3.8.1, paraview/4.4</td>
+</tr>
+<tr>
+<td align="left">povray</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/POVRay/index.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/POVRay/index.html</a></td>
+<td align="left">povray/3.6.1</td>
+</tr>
+<tr>
+<td align="left">haploview</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/plink.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/plink.html</a></td>
+<td align="left">haploview/4.1</td>
+</tr>
+<tr>
+<td align="left">pcre</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">pcre/8.38</td>
+</tr>
+<tr>
+<td align="left">mafft</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mafft.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mafft.html</a></td>
+<td align="left">mafft/7.481</td>
+</tr>
+<tr>
+<td align="left">metaphlan</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/metaphlan.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/metaphlan.html</a></td>
+<td align="left">metaphlan/2.6.0</td>
+</tr>
+<tr>
+<td align="left">nextflow</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/nextflow.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/nextflow.html</a></td>
+<td align="left">nextflow/21.10.1, nextflow/21.10.6</td>
+</tr>
+<tr>
+<td align="left">ORFfinder</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/ORFfinder.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/ORFfinder.html</a></td>
+<td align="left">ORFfinder/0.4.3</td>
+</tr>
+<tr>
+<td align="left">orthofinder</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/orthofinder.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/orthofinder.html</a></td>
+<td align="left">orthofinder/2.5.4</td>
+</tr>
+<tr>
+<td align="left">libxml2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libxml2/2.9.10, libxml2/2.9.12</td>
+</tr>
+<tr>
+<td align="left">libxpm</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">libxpm/3.5.12</td>
+</tr>
+<tr>
+<td align="left">mamba</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">mamba/22.9.0-2</td>
+</tr>
+<tr>
+<td align="left">minimap2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/minimap2.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/minimap2.html</a></td>
+<td align="left">minimap2/2.15</td>
+</tr>
+<tr>
+<td align="left">orca</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">orca/5.0.3, orca/5.0.4</td>
+</tr>
+<tr>
+<td align="left">structure-java</td>
+<td align="left"><a href="https://hpc.nih.gov/development/java.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/java.html</a></td>
+<td align="left">structure-java/2.3.4</td>
+</tr>
+<tr>
+<td align="left">salmon</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/salmon.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/salmon.html</a></td>
+<td align="left">salmon/1.6.0, salmon/0.13.1</td>
+</tr>
+<tr>
+<td align="left">openssl</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">openssl/1.1.1</td>
+</tr>
+<tr>
+<td align="left">ninja</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">ninja/1.10.1</td>
+</tr>
+<tr>
+<td align="left">tcltk</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">tcltk/08.5.11-rhel6, tcltk/8.5.11</td>
+</tr>
+<tr>
+<td align="left">rstudio</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/RStudio.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/RStudio.html</a></td>
+<td align="left">rstudio/0.96.331, rstudio/1.1.447, rstudio/1.1.383, rstudio/0.99.903</td>
+</tr>
+<tr>
+<td align="left">tophat</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/tophat.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/tophat.html</a></td>
+<td align="left">tophat/1.0.14, tophat/2.0.10, tophat/2.0.9(default), tophat/2.0.13</td>
+</tr>
+<tr>
+<td align="left">picard</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/picard.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/picard.html</a></td>
+<td align="left">picard/1.139, picard/2.8.0</td>
+</tr>
+<tr>
+<td align="left">protobuf</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">protobuf/3.18, protobuf/2.6</td>
+</tr>
+<tr>
+<td align="left">R</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">abaqus/V6R2017, abaqus/V6R2018, NCAR/5.2.1, MCR/R2012b, mirPRo/1.1.4, MCR/R2012a, ORFfinder/0.4.3, sf/R_4.0.0, R/3.2.2, R/3.4.1, R/4.0.0, R/3.2.5, PyRosetta/r55194, R/3.6.3, RepeatMasker/4.0.7, STAR/2.7.0a, R/3.3.3, R/3.4, R/4.2.2, tecplot/2013R1, R/3.4_dulla, R/3.0.3, R/3.5.0, RetroSeq/20130716(default), STAR/2.6.1d, R/3.0.2, R/3.1.0, ViennaRNA/2.1.6(default), PyRosetta/r55193, R/3.0.1, R/3.3.2, R/3.4.3(default), R/4.1.1, STAR/2.3.0e, R/2.15.3, STAR/2.5.2b(default), RAxML/8.2.12, R/4.2.0</td>
+</tr>
+<tr>
+<td align="left">rosetta</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/rosetta.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/rosetta.html</a></td>
+<td align="left">rosetta/3.4, rosetta/3.13_mpi, rosetta/3.7, rosetta/3.13</td>
+</tr>
+<tr>
+<td align="left">usearch</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/usearch.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/usearch.html</a></td>
+<td align="left">usearch/8.1.1861, usearch/10.0.240, usearch/7.0.1001(default)</td>
+</tr>
+<tr>
+<td align="left">ncbi-magicblast</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/magicblast.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/magicblast.html</a></td>
+<td align="left">ncbi-magicblast/1.5.0</td>
+</tr>
+<tr>
+<td align="left">QIIME</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/QIIME.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/QIIME.html</a></td>
+<td align="left">QIIME/1.9.0(default), QIIME/1.7.0, QIIME/1.8.0, QIIME/1.5.0, QIIME/1.6.0</td>
+</tr>
+<tr>
+<td align="left">samtools</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/samtools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/samtools.html</a></td>
+<td align="left">samtools/0.1.18(default), samtools/0.1.19, samtools/1.9, samtools/1.2</td>
+</tr>
+<tr>
+<td align="left">plink</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/plink.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/plink.html</a></td>
+<td align="left">plink/1.90b5, plink2/2.0, plink/1.06, plinkseq/0.10</td>
+</tr>
+<tr>
+<td align="left">sra</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/sratoolkit.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/sratoolkit.html</a></td>
+<td align="left">sra/2.5.0, sra/2.10.8, sra/2.9.2</td>
+</tr>
+<tr>
+<td align="left">root</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/singularity.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/singularity.html</a></td>
+<td align="left">root/6.22.08_pythia6, root/6.24.06, root/5.34.18, proot/5.1.0, root/6.22.08</td>
+</tr>
+<tr>
+<td align="left">python</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">boost/1.63.0-python3, python/2.7.4, python/3.8.8, python/3.6.0, tensorflow/11-python3.5, python/2.7.6, python/3.5.0, tensorflow/11-python2.7, python/2.6.5, python/2.7.3(default)</td>
+</tr>
+<tr>
+<td align="left">rsem</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/rsem.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/rsem.html</a></td>
+<td align="left">rsem/1.3, rsem/1.3.3, rsem/1.2.14(default), rsem/1.3.1</td>
+</tr>
+<tr>
+<td align="left">singularity</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/singularity.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/singularity.html</a></td>
+<td align="left">singularity/3.6.1, singularity/2.6.1(default), singularity/3.1.0, singularity/3.5.3, singularity/3.8.4</td>
+</tr>
+<tr>
+<td align="left">subread</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/subread.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/subread.html</a></td>
+<td align="left">subread/1.6.3, subread/1.5.1</td>
+</tr>
+<tr>
+<td align="left">vmd</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/VMD.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/VMD.html</a></td>
+<td align="left">vmd/1.9.4, vmd/1.9</td>
+</tr>
+<tr>
+<td align="left">pytorchgpu</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/deep_learning.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/deep_learning.html</a></td>
+<td align="left">pytorchgpu/1</td>
+</tr>
+<tr>
+<td align="left">perl</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/modules.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/modules.html</a></td>
+<td align="left">bioperl/1.7.6, perl/5.34.0, perl/5.34.0_gcc7.3.0, superlu/4.0, perl/5.32.1</td>
+</tr>
+<tr>
+<td align="left">PyRosetta</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/PyRosetta.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/PyRosetta.html</a></td>
+<td align="left">PyRosetta/r55194, PyRosetta/r55193</td>
+</tr>
+<tr>
+<td align="left">trinity</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/trinity.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/trinity.html</a></td>
+<td align="left">trinity/10.15.15, trinity/7.17.14</td>
+</tr>
+<tr>
+<td align="left">plink2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/plink.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/plink.html</a></td>
+<td align="left">plink2/2.0</td>
+</tr>
+<tr>
+<td align="left">RepeatMasker</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/repeatmasker.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/repeatmasker.html</a></td>
+<td align="left">RepeatMasker/4.0.7</td>
+</tr>
+<tr>
+<td align="left">STAR</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/STAR.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/STAR.html</a></td>
+<td align="left">STAR/2.7.0a, STAR/2.6.1d, STAR/2.3.0e, STAR/2.5.2b(default)</td>
+</tr>
+<tr>
+<td align="left">rclone</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/rclone.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/rclone.html</a></td>
+<td align="left">rclone/1.51.0, rclone/1.59.0</td>
+</tr>
+<tr>
+<td align="left">rsync</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/transfer.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/transfer.html</a></td>
+<td align="left">rsync/3.2.2</td>
+</tr>
+<tr>
+<td align="left">pythia</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">root/6.22.08_pythia6, pythia/8235, pythia/8219, pythia6/6.4.28-gcc-4.8.5, pythia6/6.4.28</td>
+</tr>
+<tr>
+<td align="left">trinotate</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/trinotate.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/trinotate.html</a></td>
+<td align="left">trinotate/2.0.2</td>
+</tr>
+<tr>
+<td align="left">stacks</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">stacks/2.53, stacks/1.12(default)</td>
+</tr>
+<tr>
+<td align="left">plinkseq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/plinkseq.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/plinkseq.html</a></td>
+<td align="left">plinkseq/0.10</td>
+</tr>
+<tr>
+<td align="left">spades</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/spades.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/spades.html</a></td>
+<td align="left">spades/3.12.0, spades/3.15.4</td>
+</tr>
+<tr>
+<td align="left">zlib</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">zlib/1.2.8, zlib/1.2.11</td>
+</tr>
+<tr>
+<td align="left">phred</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/modphred.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/modphred.html</a></td>
+<td align="left">phred/0.0</td>
+</tr>
+<tr>
+<td align="left">rnaseqmut</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/VIRTUS.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/VIRTUS.html</a></td>
+<td align="left">rnaseqmut/1.0</td>
+</tr>
+<tr>
+<td align="left">pandoc</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">pandoc/2.14</td>
+</tr>
+<tr>
+<td align="left">valgrind</td>
+<td align="left"><a href="https://hpc.nih.gov/development/debugging.html" rel="noopener" target="_blank">https://hpc.nih.gov/development/debugging.html</a></td>
+<td align="left">valgrind/3.16.1</td>
+</tr>
+<tr>
+<td align="left">pilon</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/pilon.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/pilon.html</a></td>
+<td align="left">pilon/1.22</td>
+</tr>
+<tr>
+<td align="left">qiime2</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/QIIME.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/QIIME.html</a></td>
+<td align="left">qiime2/2017.7, qiime2/2021.11, qiime2/2018.8</td>
+</tr>
+<tr>
+<td align="left">SAS</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/SAS.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/SAS.html</a></td>
+<td align="left">SAS/9.3, SAS/9.4(default)</td>
+</tr>
+<tr>
+<td align="left">solar</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/solar.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/solar.html</a></td>
+<td align="left">solar/4.2.7</td>
+</tr>
+<tr>
+<td align="left">squid</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/transfer.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/transfer.html</a></td>
+<td align="left">squid/1.9g(default)</td>
+</tr>
+<tr>
+<td align="left">relion</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/RELION/index.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/RELION/index.html</a></td>
+<td align="left">relion/4.0</td>
+</tr>
+<tr>
+<td align="left">tabix</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/samtools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/samtools.html</a></td>
+<td align="left">tabix/20131216</td>
+</tr>
+<tr>
+<td align="left">proj4</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/R.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/R.html</a></td>
+<td align="left">proj4/4.4</td>
+</tr>
+<tr>
+<td align="left">sniffles</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/sniffles.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/sniffles.html</a></td>
+<td align="left">sniffles/1.0.10</td>
+</tr>
+<tr>
+<td align="left">SuiteSparse</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">SuiteSparse/3.6.1</td>
+</tr>
+<tr>
+<td align="left">tensorflow</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/deep_learning.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/deep_learning.html</a></td>
+<td align="left">tensorflow/11-python3.5, tensorflow/11-python2.7</td>
+</tr>
+<tr>
+<td align="left">vcftools</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/vcftools.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/vcftools.html</a></td>
+<td align="left">vcftools/0.1.13(default), vcftools/0.1.12b</td>
+</tr>
+<tr>
+<td align="left">phenix</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Phenix.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Phenix.html</a></td>
+<td align="left">phenix/1.13</td>
+</tr>
+<tr>
+<td align="left">Qt</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/RStudio.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/RStudio.html</a></td>
+<td align="left">Qt/4.8.4</td>
+</tr>
+<tr>
+<td align="left">RetroSeq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/VIRTUS.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/VIRTUS.html</a></td>
+<td align="left">RetroSeq/20130716(default)</td>
+</tr>
+<tr>
+<td align="left">tinker</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/mdtraj.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/mdtraj.html</a></td>
+<td align="left">tinker/7.1</td>
+</tr>
+<tr>
+<td align="left">trimmomatic</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/trimmomatic.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/trimmomatic.html</a></td>
+<td align="left">trimmomatic/0.38</td>
+</tr>
+<tr>
+<td align="left">tmhmm</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/trinotate.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/trinotate.html</a></td>
+<td align="left">tmhmm/2.0c</td>
+</tr>
+<tr>
+<td align="left">vim</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/Editors.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/Editors.html</a></td>
+<td align="left">vim/8.1</td>
+</tr>
+<tr>
+<td align="left">randfold</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/randfold.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/randfold.html</a></td>
+<td align="left">randfold/2.0(default)</td>
+</tr>
+<tr>
+<td align="left">spark</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/spark.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/spark.html</a></td>
+<td align="left">spark/2.0.1, spark/2.3.0(default)</td>
+</tr>
+<tr>
+<td align="left">ViennaRNA</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/viennarna.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/viennarna.html</a></td>
+<td align="left">ViennaRNA/2.1.6(default)</td>
+</tr>
+<tr>
+<td align="left">readline</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">readline/8.1</td>
+</tr>
+<tr>
+<td align="left">proot</td>
+<td align="left"><a href="https://hpc.nih.gov/docs/biowulf_tools.html" rel="noopener" target="_blank">https://hpc.nih.gov/docs/biowulf_tools.html</a></td>
+<td align="left">proot/5.1.0</td>
+</tr>
+<tr>
+<td align="left">Schrodinger</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/schrodinger/index.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/schrodinger/index.html</a></td>
+<td align="left">Schrodinger/2015-4, Schrodinger/2012</td>
+</tr>
+<tr>
+<td align="left">sqlite3</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/sqlite.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/sqlite.html</a></td>
+<td align="left">sqlite3/3.33.0</td>
+</tr>
+<tr>
+<td align="left">trim-galore</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/trimgalore.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/trimgalore.html</a></td>
+<td align="left">trim-galore/0.6.4_dev</td>
+</tr>
+<tr>
+<td align="left">zmq</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/python.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/python.html</a></td>
+<td align="left">zmq/4.8.1</td>
+</tr>
+<tr>
+<td align="left">RAxML</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/raxml.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/raxml.html</a></td>
+<td align="left">RAxML/8.2.12</td>
+</tr>
+<tr>
+<td align="left">transdecoder</td>
+<td align="left"><a href="https://hpc.nih.gov/apps/TransDecoder.html" rel="noopener" target="_blank">https://hpc.nih.gov/apps/TransDecoder.html</a></td>
+<td align="left">transdecoder/2.0</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../hpc_user_guide/hpc_services/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HPC Services" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                HPC Services
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../python-modules/" class="md-footer__link md-footer__link--next" aria-label="Next: Python Interactive Session" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Python Interactive Session
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "content.action.edit", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        
+      
+        
+          <script src="../../javascripts/tablesort.js"></script>
+        
+      
+    
+  </body>
+</html>
