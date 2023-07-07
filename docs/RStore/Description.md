@@ -12,10 +12,9 @@
 <summary> Steps for creating a NEW RStore directory </summary>  
     <br>
     Go to this link: tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj <br><br>
-    1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click '''[ → ] <br><br>
+    1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br><br>
     2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br><br>
-    3. Complete the required fields on the next page based on the purpose of the new drive. <br>  
-            - Please note that listed approvers and access priveledges can be changed later if needed <br><br>
+    3. Complete the required fields on the next page based on the purpose of the new drive. Please note that listed approvers and access priveledges can be changed later if needed <br><br>
     4. Review information and click [ → ] . Your ticket has been submitted, a follow-up can be expected within 1-2 business days. <br><br>
     
 </details>
@@ -31,8 +30,8 @@
 4. In the Folder box, type the path of the drive <br><br>
 5. Click Finish <br><br>
 6. If your computer is not owned by Tufts, your credentials should be: <br>  
-            - Username: tufts\Tufts_Username <br> 
-            - Password: Tufts_Password <br> 
+        ****** Username: tufts\Tufts_Username ******<br> 
+        ****** Password: Tufts_Password       ******<br> 
 </details>
 
 <details>
