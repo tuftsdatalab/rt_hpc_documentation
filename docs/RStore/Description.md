@@ -25,7 +25,7 @@
 ### **How to map a drive once it has been created:**
 
 ??? success "To map the drive(s) on a Windows computer:" 
-<br>
+    <br>
     1. Open Computer by clicking the Start button, and then clicking Computer <br><br>
     2. Click the Tools menu, and then click Map Network Drive <br><br>
     3. In the Drive list, click a drive letter (R) <br><br>
@@ -38,7 +38,7 @@
 
 
 ??? success "To map the drive(s) on a Mac:"
-<br>
+    <br>
     1. Click on Finder then press Command+K <br><br>
     2. Enter the path to the network drive you want to map <br><br>
     3. Click Connect 
