@@ -1,8 +1,8 @@
-##Additional R Store Requests 
+## <u> Additional R Store Requests </u>
 
 For all of the following requests please go to ==[tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)== and login with your Tufts Credentials. 
 
-<img src="https://i.imgur.com/q7wx5t7.png"  width="35%" height="35%">
+<img src="https://i.imgur.com/q7wx5t7.png"  width="45%" height="45%">
 
 Once at the screen above, fill out the blank fields and select "Research Storage Request Related to Cluster, RStore or Galaxy" and click [ → ]. 
 
