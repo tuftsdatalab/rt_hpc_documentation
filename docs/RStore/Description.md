@@ -9,14 +9,18 @@
 ### **How to Create a NEW storage **
 
 <details>
-<summary> Steps for creating a NEW RStore directory </summary>  
+<summary> Please do the following to submit an official RStore Drive Request: </summary>  
     <br>
-    Go to this link: tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj <br><br>
-    1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br><br>
-    2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br><br>
-    3. Complete the required fields on the next page based on the purpose of the new drive. Please note that listed approvers and access priveledges can be changed later if needed <br><br>
-    4. Review information and click [ → ] . Your ticket has been submitted, a follow-up can be expected within 1-2 business days. <br><br>
-    
+a. Go to https://it.tufts.edu/research-technology/ <br>
+b. Click on "Research Storage Request" <br>
+c. Login with your Tufts credentials <br>
+d. Fill out blank fields <br>
+e. Select "Research Storage Request Related to Cluster, RStore or Galaxy" <br>
+f. Select "Rstore Drive (R drive, Desktop Storage)" <br>
+g. Select "New Storage" <br>
+h. Click [ → ] <br>
+i. Fill out remaining information <br>
+j. Click on Submit <br>
 </details>
 
 ### **How to map a drive once it has been created:**
