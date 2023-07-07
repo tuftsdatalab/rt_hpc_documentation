@@ -2,7 +2,7 @@
 
 For all of the following requests please go to ==[tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)== and login with your Tufts Credentials. 
 
-![](RStore/images/qualtrics.png) 
+![image](docs/RStore/images/qualtrics.png) 
 
 Once at the screen above, fill out the blank fields and select "Research Storage Request Related to Cluster, RStore or Galaxy" and click [ → ]. Proceed to the next set of directions below according to your request.  
 
