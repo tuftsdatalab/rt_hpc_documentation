@@ -1,20 +1,25 @@
-# <u>__ What is RStore and How Should I Use it? __</u>_______________________<img src="https://access.tufts.edu/themes/custom/access_tufts/assets/icons/icon-technology.svg"  width="10%" height="10%">
+# __ What is RStore and How Should I Use it? __
+<img src="https://access.tufts.edu/themes/custom/access_tufts/assets/icons/icon-technology.svg"  width="10%" height="10%">
 !!! info "What is RStore?"
     ## Rstore (Research Data Storage) is a networked drive for researchers and faculty to store research-related data and computational assets. Users typically begin with 50 GB of storage and can be escalated up to several TB as needed.  
 
     ## The storage space can be accessed by all members of the lab/group following the approval of the PI(s) or other listed approvers. 
 
 
-# **How to Create a NEW storage **
-!!! info "Please click here:       ==[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)=="
+## **How to Create a NEW storage **
+
+<details>
+<summary> To map the drive(s) on a Windows computer: </summary>       
+    Go to this link: ==[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)==" <br>
     1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br>
     2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br>
     3. Complete the required fields on the next page based on the purpose of the new drive. <br> 
         - Please note that listed approvers and access priveledges can be changed later if needed <br>
     4. Review information and click [ → ] . Your ticket has been submitted, a follow-up can be expected within 1-2 business days. <br>
-    </Test>
+    
+</details>
 
-# **How to map a drive once it has been created:**
+## **How to map a drive once it has been created:**
 
 <details>
 <summary>To map the drive(s) on a Windows computer: </summary>
