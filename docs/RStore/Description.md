@@ -9,8 +9,8 @@
 ## **How to Create a NEW storage **
 
 <details>
-<summary> To map the drive(s) on a Windows computer: </summary>       
-    Go to this link: ==[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)==" <br>
+<summary> ==[https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj](https://tufts.qualtrics.com/jfe/form/SV_5bUmpFT0IXeyEfj)==" </summary>       
+    Go to this link: <br>
     1. Fill out required fields and select "Research Storage Request Related to Cluster, Rstore or Galaxy" and click [ → ] <br>
     2. Select "Rstore Drive" and "New Storage or Increment" and click [ → ] <br>
     3. Complete the required fields on the next page based on the purpose of the new drive. <br> 
