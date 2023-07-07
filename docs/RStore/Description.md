@@ -1,12 +1,12 @@
 # __ What is RStore and How Should I Use it? __
 <img src="https://access.tufts.edu/themes/custom/access_tufts/assets/icons/icon-technology.svg"  width="10%" height="10%">
 !!! info "What is RStore?"
-    ## Rstore (Research Data Storage) is a networked drive for researchers and faculty to store research-related data and computational assets. Users typically begin with 50 GB of storage and can be escalated up to several TB as needed.  
+    	Rstore (Research Data Storage) is a networked drive for researchers and faculty to store research-related data and computational assets. Users typically begin with 50 GB of storage and can be escalated up to several TB as needed.  
 
-    ## The storage space can be accessed by all members of the lab/group following the approval of the PI(s) or other listed approvers. 
+    	The storage space can be accessed by all members of the lab/group following the approval of the PI(s) or other listed approvers. 
 
 
-	### **How to Create a NEW storage **
+### **How to Create a NEW storage **
 
 <details>
 <summary> Steps for creating a NEW RStore directory </summary>       
@@ -19,7 +19,7 @@
     
 </details>
 
-	### **How to map a drive once it has been created:**
+### **How to map a drive once it has been created:**
 
 <details>
 <summary>To map the drive(s) on a Windows computer: </summary>
