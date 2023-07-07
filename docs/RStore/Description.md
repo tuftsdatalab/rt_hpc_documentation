@@ -11,16 +11,16 @@
 <details>
 <summary> Please do the following to submit an official RStore Drive Request: </summary>  
     <br>
-a. Go to https://it.tufts.edu/research-technology/ <br>
-b. Click on "Research Storage Request" <br>
-c. Login with your Tufts credentials <br>
-d. Fill out blank fields <br>
-e. Select "Research Storage Request Related to Cluster, RStore or Galaxy" <br>
-f. Select "Rstore Drive (R drive, Desktop Storage)" <br>
-g. Select "New Storage" <br>
-h. Click [ → ] <br>
-i. Fill out remaining information <br>
-j. Click on Submit <br>
+a. Go to https://it.tufts.edu/research-technology/ <br><br>
+b. Click on "Research Storage Request" <br><br>
+c. Login with your Tufts credentials <br><br>
+d. Fill out blank fields <br><br>
+e. Select "Research Storage Request Related to Cluster, RStore or Galaxy" <br><br>
+f. Select "Rstore Drive (R drive, Desktop Storage)" <br><br>
+g. Select "New Storage" <br><br>
+h. Click [ → ] <br><br>
+i. Fill out remaining information <br><br>
+j. Click on Submit <br><br>
 </details>
 
 ### **How to map a drive once it has been created:**
